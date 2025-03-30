@@ -4,14 +4,14 @@
 	"width": 1880,
 	"margin-top": 10,
 
-	"modules-left": ["hyprland/workspaces", "hyprland/window"],
+	"modules-left": ["hyprland/language","hyprland/workspaces", "hyprland/window"],
 	"modules-center": ["custom/cmus", "custom/weather", "temperature"],
 	"modules-right": ["battery", "backlight", "pulseaudio", "network", "clock", "tray", "custom/power"],
 
 	"custom/menu": {
 		"format": "{icon}",
 		"format-icons": "",
-		"on-click": "~/.config/rofi/launchers/type-6/launcher_2.sh",
+		"on-click": "rofi -show drun",
 		"escape": true,
 		"tooltip": false
 	},
@@ -92,6 +92,7 @@
 		"format": "{}",
 		"format-en": "EN",
 		"format-ru": "RU",
+		"format-uk": "UK",
 	},
 
 	"backlight": {
@@ -147,7 +148,7 @@
         	"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
         	"tooltip-format-disconnected": "Disconnected",
         	"max-length": 50,
-        	"on-click": "nm-connection-editor"
+        	"on-click": "wifimenu"
         },
 
 	"clock": {
