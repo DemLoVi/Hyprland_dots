@@ -12,7 +12,7 @@
 </p>
 
 <!-- INFORMATION -->
-<h2 align="center"> Builder I use is a fork of [Zproger builder](https://github.com/Zproger/bspwm-dotfiles)</h2>
+Builder that I use is a fork of [**`Zproger builder`**](https://github.com/Zproger/bspwm-dotfiles)
 <h1 align="left"> :blue_book: About</h1> 
 
 <img src="demonstration/1.png" alt="rice" align="right" width="500px">
