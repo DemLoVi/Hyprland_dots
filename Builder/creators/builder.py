@@ -38,6 +38,7 @@ class SystemConfiguration:
         AurBuilder.build()
         SystemConfiguration.__install_pacman_package(packages.BASE_PACKAGES)
         SystemConfiguration.__install_aur_package(packages.AUR_PACKAGES)
+        os.system('sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"')
 
     @staticmethod
     def __start_option_4():
