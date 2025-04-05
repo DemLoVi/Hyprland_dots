@@ -20,7 +20,7 @@ while true; do
       last="FULL"
     fi
 
-    if ([ "$last" = "LOW" ] || [ "$last" = "CRITICAL" ]) && [ "$status" = "Charging" ]; then
+    if { [ "$last" = "LOW" ] || [ "$last" = "CRITICAL" ]; } && [ "$status" = "Charging" ]; then
 	    sudo cpupower frequency-set -u 4400000
 	    sudo cpupower frequency-set -g perfomance
 	    notify-send "You are in the perfomance mode now"
@@ -29,7 +29,7 @@ while true; do
 
     # If low and discharging
     if [ "$last" != "LOW" ] && [ "$last" != "CRITICAL" ]  && \
-       [ "$status" = "Discharging" ] && [ $capacity -le $low ]; then
+       [ "$status" = "Discharging" ] && [ "$capacity" -le $low ]; then
       notify-send "Battery low: $capacity%
 You are in the powersaving mode now"
       sudo cpupower frequency-set -g powersave
@@ -38,7 +38,7 @@ You are in the powersaving mode now"
 
 	# If critical level and discharging
 	if [ "$last" = "LOW" ] && [ "$status" = "Discharging" ] && \
-	   [ $capacity -le $critical ]; then
+	   [ "$capacity" -le $critical ]; then
 	  notify-send "Battery critical: $capacity%
 You are now hardlocked on 800 MHz"
 	  sudo cpupower frequency-set -u 800000

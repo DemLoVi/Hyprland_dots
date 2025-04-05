@@ -36,9 +36,6 @@ Builder that I use is a fork of [**`Zproger builder`**](https://github.com/Zprog
 ![gallery](demonstration/2.png)
 ![gallery](demonstration/3.png)
 ![gallery](demonstration/4.png)
-![gallery](demonstration/5.png)
-![gallery](demonstration/6.png)
-![gallery](demonstration/7.png)
 
 <table align="center">
    <tr>
