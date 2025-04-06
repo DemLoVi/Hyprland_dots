@@ -4,7 +4,7 @@ BASE_PACKAGES = [
     "bat", "brightnessctl", "calc", "hyprpaper", "hyprpicker", "hypridle", "hyprlock",
     "blueman", "bluez", "bluez-utils", "mako", "fakeroot", "feh", "firefox",
     "kitty", "git", "htop", "btop", "nano", "firefox", "nwg-look",
-    "mat2", "mpd", "mpv", "nemo", "ncmpcpp", "neofetch", 
+    "mat2", "mpd", "mpv", "nemo", "ncmpcpp", "neofetch", "exa",
     "papirus-icon-theme", "pavucontrol", "waybar", "mpc", "pulseaudio",
     "pulseaudio-alsa", "python-pyalsa", "ranger", "redshift", "rofi", "rofi-calc", "rofi-emoji",
     "sudo", "unrar", "zip", "unzip", "uthash", "xarchiver",
