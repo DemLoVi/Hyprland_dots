@@ -55,7 +55,7 @@ Builder that I use is a fork of [**`Zproger builder`**](https://github.com/Zprog
 
 <!-- INSTALLATION -->
 ## :blue_book: Installation
-A guide to installing the system and graphical shell via builder: [EN](Docs/01_installing_arch_linux_with_bspwm_english.md), [RU](Docs/00_installing_arch_linux_with_bspwm_russian.md). 
+A guide to installing the system and graphical shell via builder: [EN](Docs/01_installing_arch_linux_with_hyprland_english.md), [RU](Docs/00_installing_arch_linux_with_hyprland_russian.md). 
 
 
 <!-- HOTKEYS -->
