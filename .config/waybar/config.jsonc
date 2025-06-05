@@ -6,7 +6,7 @@
 
 	"modules-left": ["hyprland/language","hyprland/workspaces", "hyprland/window"],
 	"modules-center": ["custom/cmus", "custom/weather", "temperature"],
-	"modules-right": ["battery", "backlight", "pulseaudio", "network", "clock", "tray", "custom/power"],
+	"modules-right": ["battery", "backlight", "pulseaudio", "network", "bluetooth", "clock", "tray", "custom/power"],
 
 	"custom/menu": {
 		"format": "{icon}",
@@ -129,14 +129,16 @@
 	},
 
 	"bluetooth": {
-        	"format": "<span color='#E0E0E0'></span>",
-		"tooltip-format": "{status}",
-        	"format-disabled": "",
-        	"format-off": "",
-        	"interval": 30,
-        	"on-click": "blueman-manager",
-        	"format-no-controller": ""
-        },
+		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+		"format": "󰂯",
+		"format-poweroff": "0",
+		"format-disabled": "󰂲", // an empty format will hide the module
+		"format-connected": "󰂲 {num_connections}",
+		"tooltip-format": "{controller_alias}\t{controller_address}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"on-click": "rofi-bluetooth"
+	},
 
 	"network": {
         	"format": "{ifname}",
@@ -181,7 +183,7 @@
 	"custom/power": {
 		"format": "{icon}",
 		"format-icons": "",
-		"on-click": "~/.config/rofi/powermenu/type-4/powermenu.sh",
+		"on-click": "powermenu",
 		"escape": true,
 		"tooltip": false
 	},

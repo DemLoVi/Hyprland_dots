@@ -2,11 +2,11 @@
 
 BASE_PACKAGES = [
     "bat", "brightnessctl", "calc", "hyprpaper", "hyprpicker", "hypridle", "hyprlock",
-    "blueman", "bluez", "bluez-utils", "mako", "fakeroot", "feh", "firefox",
+    "bluez", "bluez-utils", "mako", "fakeroot", "feh", "firefox",
     "kitty", "git", "htop", "btop", "nano", "firefox", "nwg-look",
     "mat2", "mpd", "mpv", "nemo", "ncmpcpp", "neofetch", "exa",
     "papirus-icon-theme", "pavucontrol", "waybar", "mpc", "pulseaudio",
-    "pulseaudio-alsa", "python-pyalsa", "ranger", "redshift", "rofi", "rofi-calc", "rofi-emoji",
+    "pulseaudio-alsa", "python-pyalsa", "ranger", "rofi", "rofi-calc", "rofi-emoji",
     "sudo", "unrar", "zip", "unzip", "uthash", "xarchiver",
     "gzip", "imagemagick", "openssh", "pulseaudio-bluetooth", "shellcheck",
     "vlc", "usbutils", "networkmanager-openvpn", "alsa-plugins", "alsa-tools", "alsa-utils", "ffmpeg",
@@ -22,5 +22,5 @@ DEV_PACKAGES = [
 ]
 
 AUR_PACKAGES = [
-    "hyprland", "cava", "ptpython", "graphite-gtk-theme", "youtube-dl"
+    "hyprland", "cava", "ptpython", "graphite-gtk-theme", "youtube-dl", "rofi-bluetooth-git", "dysk"
 ]
