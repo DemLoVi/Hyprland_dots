@@ -12,7 +12,7 @@ BASE_PACKAGES = [
     "vlc", "usbutils", "networkmanager-openvpn", "alsa-plugins", "alsa-tools", "alsa-utils", "ffmpeg",
     "p7zip", "gparted", "sshfs", "openvpn", "wget", "ueberzug", "netctl", "light", "libreoffice",
     "breeze", "vulkan-intel", "intel-ucode", "ttf-jetbrains-mono", "ttf-font-awesome", "fish", "noto-fonts-extra", 
-    "ttf-nerd-fonts-symbols", "ttf-nerd-fonts-symbols-comon", "ttf-iconmoon-feather", "otf-font-awesome"
+    "ttf-nerd-fonts-symbols", "ttf-nerd-fonts-symbols-comon", "ttf-iconmoon-feather", "otf-font-awesome", "bitwarden-cli", "wl-clipboard"
 ]
 
 DEV_PACKAGES = [
@@ -22,5 +22,5 @@ DEV_PACKAGES = [
 ]
 
 AUR_PACKAGES = [
-    "hyprland", "cava", "ptpython", "graphite-gtk-theme", "youtube-dl", "rofi-bluetooth-git", "dysk"
+    "hyprland", "cava", "ptpython", "graphite-gtk-theme", "youtube-dl", "rofi-bluetooth-git", "dysk", "bitwarden-rofi-git"
 ]
