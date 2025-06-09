@@ -38,6 +38,7 @@ class SystemConfiguration:
         AurBuilder.build()
         SystemConfiguration.__install_pacman_package(packages.BASE_PACKAGES)
         SystemConfiguration.__install_aur_package(packages.AUR_PACKAGES)
+        FirefoxCustomize.build()
 
     @staticmethod
     def __start_option_4():
