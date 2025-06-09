@@ -3,6 +3,7 @@ import packages
 
 from logger import Logger, LoggerStatus
 from creators.software import AurBuilder
+from creators.software import FirefoxCustomize
 from creators.drivers import GraphicDrivers
 from creators.patches import PatchSystemBugs
 from creators.daemons import Daemons
