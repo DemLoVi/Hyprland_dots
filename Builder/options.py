@@ -15,10 +15,10 @@ class UserInterface:
 
     @staticmethod
     def is_verify_response(text) -> bool:
-        if "y" in text.lower():
-            return True
-        else:
+        if "n" in text.lower():
             return False
+        else:
+            return True
 
     @staticmethod
     def get_params():
@@ -33,8 +33,5 @@ class UserInterface:
 
         print("4) Install Dev Dependencies? [Y/n] ", end="")
         option_4 = UserInterface.is_verify_response(input())
-        
-        print("5) Install Nvidia & Intel Drivers? [Y/n] ", end="")
-        option_5 = UserInterface.is_verify_response(input())
 
-        return [option_1, option_2, option_3, option_4, option_5]
+        return [option_1, option_2, option_3, option_4]

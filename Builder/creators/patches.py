@@ -3,8 +3,8 @@ import os
 class PatchSystemBugs:
     @staticmethod
     def enable_all_patches():
-        PatchSystemBugs.__assign_permissions_to_configs()
         PatchSystemBugs.__OMZ_install()
+        PatchSystemBugs.__assign_permissions_to_configs()
 
     @staticmethod
     def __assign_permissions_to_configs():
