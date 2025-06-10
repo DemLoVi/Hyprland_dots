@@ -13,6 +13,7 @@
 
 <!-- INFORMATION -->
 Builder that I use is a fork of [**`Zproger builder`**](https://github.com/Zproger/bspwm-dotfiles)
+System have preinstalled firefox startpage [**`Dawn`**](httpa://github.com/TheMY3/dawn-startpage)
 <h1 align="left"> :blue_book: About</h1> 
 
 <img src="demonstration/1.png" alt="rice" align="right" width="500px">
@@ -62,7 +63,7 @@ A guide to installing the system and graphical shell via builder: [EN](Docs/01_i
 ## 💻 HotKeys
 * **Open the terminal** - `super + enter`
 * **Set a random wallpaper** - `super + w`
-* **Open the application menu** - `super + r`
+* **Open the application menu** - `alt + space`
 * **Recognize the color on the screen** - `super + x`
 * **Lock the screen** - `super + l`
 * **Close the window that is in focus** - `super + q`

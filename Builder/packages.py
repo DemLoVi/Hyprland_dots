@@ -2,7 +2,7 @@
 
 BASE_PACKAGES = [
     "bat", "brightnessctl", "calc", "hyprpaper", "hyprpicker", "hypridle", "hyprlock",
-    "bluez", "bluez-utils", "mako", "fakeroot", "feh", "firefox",
+    "bluez", "bluez-utils", "mako", "fakeroot", "feh", "firefox", "fish",
     "kitty", "zsh", "git", "htop", "btop", "nano", "vim", "firefox", "nwg-look",
     "mat2", "mpd", "mpv", "nemo", "ncmpcpp", "neofetch", "exa",
     "papirus-icon-theme", "pavucontrol", "waybar", "mpc", "pulseaudio",
