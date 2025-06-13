@@ -22,5 +22,5 @@ DEV_PACKAGES = [
 ]
 
 AUR_PACKAGES = [
-    "hyprland", "cava", "ptpython", "nordic-theme", "youtube-dl", "rofi-bluetooth-git", "dysk", "bitwarden-rofi-git"
+        "hyprland", "cava", "ptpython", "nordic-theme", "youtube-dl", "rofi-bluetooth-git", "dysk", "bitwarden-rofi-git", "zsh-theme-powerlevel10k-git"
 ]
