@@ -13,3 +13,6 @@ class PatchSystemBugs:
     @staticmethod
     def __OMZ_install():
         os.system('sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"')
+        os.system('cp .zshrc ~/')
+        os.system('git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions')
+        os.system('git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting')

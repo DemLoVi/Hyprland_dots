@@ -75,4 +75,3 @@ class SystemConfiguration:
         Logger.add_record("[+] Copy Dotfiles", status=LoggerStatus.SUCCESS)
         os.system("cp -r .config/* ~/.config/")
         os.system("cp -r bin/* /usr/bin/")
-        os.system("cp .zshrc ~/")
