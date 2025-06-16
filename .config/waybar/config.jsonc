@@ -150,7 +150,7 @@
         	"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
         	"tooltip-format-disconnected": "Disconnected",
         	"max-length": 50,
-        	"on-click": "wifimenu"
+        	"on-click": "~/bin/wifimenu"
         },
 
 	"clock": {

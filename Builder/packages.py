@@ -3,7 +3,7 @@
 BASE_PACKAGES = [
     "bat", "brightnessctl", "calc", "hyprpaper", "hyprpicker", "hypridle", "hyprlock",
     "bluez", "bluez-utils", "mako", "fakeroot", "feh", "firefox", "fish",
-    "kitty", "zsh", "git", "htop", "btop", "nano", "vim", "firefox", "nwg-look",
+    "kitty", "git", "htop", "btop", "nano", "vim", "firefox", "nwg-look",
     "mat2", "mpd", "mpv", "nemo", "ncmpcpp", "neofetch", "exa",
     "papirus-icon-theme", "pavucontrol", "waybar", "mpc", "pulseaudio",
     "pulseaudio-alsa", "python-pyalsa", "ranger", "rofi", "rofi-calc", "rofi-emoji",
@@ -22,5 +22,5 @@ DEV_PACKAGES = [
 ]
 
 AUR_PACKAGES = [
-        "hyprland", "cava", "ptpython", "nordic-theme", "youtube-dl", "rofi-bluetooth-git", "dysk", "bitwarden-rofi-git", "zsh-theme-powerlevel10k-git"
+        "hyprland", "cava", "ptpython", "nordic-theme", "youtube-dl", "rofi-bluetooth-git", "dysk", "bitwarden-rofi-git"
 ]
