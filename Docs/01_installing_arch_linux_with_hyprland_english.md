@@ -170,6 +170,7 @@ and you will then be prompted to log in to the user by entering your username an
 ```bash
 sudo pacman -Sy
 sudo pacman -S git python3
+```
 
 Download the repository locally, but before executing builder I recommend going to `Builder/packages.py` and seeing the packages that will be installed.
 I don't recommend editing `BASE_PACKAGES` as they are necessary for the shell to work properly, however you are free to edit other kinds of packages.
@@ -185,7 +186,7 @@ python3 Builder/install.py
 In the menu you need to give permission to install `dotfiles`, update bases, install `BASE_PACKAGES`. The rest of the options are up to you.
 This division of options allows you to perform only the necessary action, for example, just replace `dotfiles` or install current `DEV_PACKAGES` packages.
 
-If you have done everything correctly, you will get a ready BSPWM shell after launching.
+If you have done everything correctly, you will get a ready Hyprland shell after launching.
 ```bash
 Hyprland
 ```
