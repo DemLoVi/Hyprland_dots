@@ -13,7 +13,8 @@
 
 <!-- INFORMATION -->
 Builder that I use is a fork of [**`Zproger builder`**](https://github.com/Zproger/bspwm-dotfiles)
-System have preinstalled firefox startpage [**`Dawn`**](httpa://github.com/TheMY3/dawn-startpage)
+
+System have preinstalled firefox startpage [**`Dawn`**](https://github.com/TheMY3/dawn-startpage)
 <h1 align="left"> :blue_book: About</h1> 
 
 <img src="demonstration/1.png" alt="rice" align="right" width="500px">
@@ -68,8 +69,9 @@ A guide to installing the system and graphical shell via builder: [EN](Docs/01_i
 * **Lock the screen** - `super + l`
 * **Close the window that is in focus** - `super + q`
 * **Take a screenshot** - `print`
-* **Switch to another desktop** - `super + 1/6`
-* **Move the window to another desktop** - `super + shift + 1/6`
+* **Switch to another desktop** - `super + 1/9`
+* **Move the window to another desktop** - `super + shift + 1/9`
 * **Switch the window to floating mode** - `super + a`
+* **Switch the window to foolscreen mode** - `super + f`
 
 The other hotkeys are in `~/.config/hypr/hyprland.conf`.
