@@ -19,7 +19,7 @@
 
 window#waybar {
 	border-radius: 20;
-	background-color: @bg;
+	background-color: rgba(46,52,64,0.75);
 }
 
 
