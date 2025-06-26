@@ -8,8 +8,8 @@
 		"format": "{icon}",
 		"on-click": "activate",
 		"format-icons": {
-			"urgent": "",
-			"active": "",
+			"urgent": "󰀨",
+			"active": "",
 			"default": ""
 			},
 		"tooltip": false
@@ -36,8 +36,8 @@
 		"thermal-zone": 2,
 		"hwmon-path": ["/sys/class/hwmon/hwmon6/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
 		"critical-threshold": 80,
-		"format-critical": "<span color='#ECEFF4'></span> {temperatureC}°C",
-		"format": "<span color='#ECEFF4'></span> {temperatureC}°C",
+		"format-critical": "<span color='#BF616A'></span> {temperatureC}°C",
+		"format": "<span color='#5E81AC'></span> {temperatureC}°C",
 		"tooltip": false
         },
 
@@ -56,31 +56,28 @@
 	"backlight": {
 		"device": "intel_backlight",
 		"format": "<span color='#ECEFF4'>{icon}</span> {percent}%",
-		"format-icons": ["", ""],
+		"format-icons": ["", ""],
 		"tooltip": false
         },
 
 	"battery": {
         	"states": {
-            		// "good": 95,
             		"warning": 30,
             		"critical": 15
         	},
-        	"format": "<span color='#ECEFF4'>{icon}</span> {capacity}%",
-        	"format-charging": "<span color='#ECEFF4'></span> {capacity}%",
-        	"format-plugged": "<span color='#ECEFF4'></span>  {capacity}%",
-        	"format-alt": "<span color='#ECEFF4'>{icon}</span> {time}",
-        	// "format-good": "", // An empty format will hide the module
-        	// "format-full": "",
+        	"format": "{icon}{capacity}%",
+        	"format-charging": "{capacity}%",
+        	"format-plugged": "{capacity}%",
+        	"format-alt": "{icon}{time}",
         	"format-icons": [" ", " ", " ", " ", " "],
 		"tooltip-format": "Time to empty: {time}\nPower usage: {power:.4}W\nHealth: {health}%"
         },
     
 	"pulseaudio": {
 		"scroll-step": 5,
-		"format": "<span color='#ECEFF4'>{icon}</span> {volume}%",
+		"format": "{icon}{volume}%",
 		"format-icons": {
-		"default": ["", "", ""]
+		"default": [" ", " ", " "]
 		},
 		"on-click": "pavucontrol",
 		"tooltip": false
@@ -100,9 +97,9 @@
 
 	"network": {
         	"format": "{ifname}",
-        	"format-wifi": "<span color='#ECEFF4'></span>",
-        	"format-ethernet": "<span color='#ECEFF4'></span>",
-        	"format-disconnected": "<span color='#ECEFF4'></span>",
+        	"format-wifi": "",
+        	"format-ethernet": "",
+        	"format-disconnected": "",
         	"tooltip-format": " {ifname} via {gwaddri}",
         	"tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
         	"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",

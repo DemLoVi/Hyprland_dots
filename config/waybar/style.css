@@ -12,9 +12,6 @@ window#waybar {
 
 #workspaces {
 	padding: 2 10;
-	margin: 5;
-	color: @fg;
-	border: none;
 }
 #workspaces button {
 	background-color: transparent;
@@ -41,6 +38,9 @@ window#waybar {
 #pulseaudio {
 	padding: 2 10;
 }
+#pulseaudio:hover {
+	color: #81A1C1;
+}
 #backlight {
 	padding: 2 10;
 }
@@ -50,6 +50,17 @@ window#waybar {
 
 #battery {
 	padding: 2 10;
+	border-radius: 20;
+}
+#battery.warning {
+	color: #BF616A;
+	background-color: rgba(0,0,0,0);
+}
+#battery.critical {
+	background-color: #BF616A;
+}
+#battery:hover {
+	color: #81A1C1;
 }
 
 #temperature {
@@ -59,13 +70,22 @@ window#waybar {
 #bluetooth {
 	padding: 2 10;
 }
+#bluetooth:hover {
+	color: #81A1C1;
+}
 
 #network {
 	padding: 2 10;
 }
+#network:hover {
+	color: #81A1C1;
+}
 
 #clock {
 	padding: 2 10;
+}
+#clock:hover {
+	color: #81A1C1;
 }
 
 #custom-power {
