@@ -2,9 +2,11 @@
 # Create aliases
 alias cls="clear"
 alias g="git"
+alias v="vim"
 alias n="nvim"
 alias m="micro"
-alias ls="exa"
+alias ls="lsd"
+alias cat="bat"
 
 # TODO: Replace journal aliases after switching to OpenRC
 
@@ -25,8 +27,8 @@ alias vacuum_time="journalctl --vacuum-time=2weeks"
 
 set -U fish_greeting
 set fish_color_command green
-set -gx EDITOR vim
-set -gx VISUAL vim
+set -gx EDITOR micro
+set -gx VISUAL micro
 set -gx BROWSER /usr/bin/firefox
 
 

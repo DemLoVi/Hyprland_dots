@@ -1,0 +1,148 @@
+// -*- mode: jsonc -*-
+{
+	"modules-left": ["hyprland/language","hyprland/workspaces","temperature"],
+	"modules-center": ["custom/weather","clock","hyprland/window"],
+	"modules-right": ["battery","backlight","pulseaudio","network","bluetooth","tray","custom/power"],
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"urgent": "󰀨",
+			"active": "",
+			"default": ""
+			},
+		"tooltip": false
+	},
+
+	"hyprland/window": {
+		"format": "{class}",
+		"separate-outputs": false
+	},
+
+	"custom/weather": {
+		"format": "{}",
+		"interval": 10,
+		"exec": "~/.config/waybar/weather.sh",
+		"tooltip": false
+	},
+
+	"cpu": {
+        	"format": "/ C {temp}% ",
+        	"on-click": "kitty -e htop"
+         },
+
+	"temperature": {
+		"thermal-zone": 2,
+		"hwmon-path": ["/sys/class/hwmon/hwmon6/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+		"critical-threshold": 80,
+		"format-critical": "<span color='#BF616A'></span> {temperatureC}°C",
+		"format": "<span color='#5E81AC'></span> {temperatureC}°C",
+		"tooltip": false
+        },
+
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	},
+
+	"hyprland/language": {
+		"format": "{}",
+		"format-en": "EN",
+		"format-ru": "RU",
+		"format-uk": "UK"
+	},
+
+	"backlight": {
+		"device": "intel_backlight",
+		"format": "<span color='#ECEFF4'>{icon}</span> {percent}%",
+		"format-icons": ["", ""],
+		"tooltip": false
+        },
+
+	"battery": {
+        	"states": {
+            		"warning": 30,
+            		"critical": 15
+        	},
+        	"format": "{icon}{capacity}%",
+        	"format-charging": "{capacity}%",
+        	"format-plugged": "{capacity}%",
+        	"format-alt": "{icon}{time}",
+        	"format-icons": [" ", " ", " ", " ", " "],
+		"tooltip-format": "Time to empty: {time}\nPower usage: {power:.4}W\nHealth: {health}%"
+        },
+    
+	"pulseaudio": {
+		"scroll-step": 5,
+		"format": "{icon}{volume}%",
+		"format-icons": {
+		"default": [" ", " ", " "]
+		},
+		"on-click": "pavucontrol",
+		"tooltip": false
+	},
+
+	"bluetooth": {
+		// "controller": "controller1", // specify the alias of the controller if there are more than 1 on the system
+		"format": "󰂯",
+		"format-off": "󰂲",
+		"format-disabled": "",
+		"format-connected": "󰂱 {num_connections}",
+		"tooltip-format": "{controller_alias}\t{controller_address}",
+		"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+		"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+		"on-click": "rofi-bluetooth"
+	},
+
+	"network": {
+        	"format": "{ifname}",
+        	"format-wifi": "",
+        	"format-ethernet": "",
+        	"format-disconnected": "",
+        	"tooltip-format": " {ifname} via {gwaddri}",
+        	"tooltip-format-wifi": " {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+        	"tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+        	"tooltip-format-disconnected": "Disconnected",
+        	"max-length": 50,
+        	"on-click": "~/bin/wifimenu"
+        },
+
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip-format": "<big><span color='#ECEFF4'>{:%Y %B}</span></big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}",
+
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ECEFF4'><b>{}</b></span>",
+                              "days":       "<span color='#ECEFF4'><b>{}</b></span>",
+                              "weeks":      "<span color='#ebcb8c'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ebcb8b'><b>{}</b></span>",
+                              "today":      "<span color='#bf616a'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+		},
+
+	"custom/power": {
+		"format": "{icon}",
+		"format-icons": "",
+		"on-click": "powermenu",
+		"escape": true,
+		"tooltip": false
+	},
+
+	"escape": true
+	}
+}
