@@ -63,7 +63,7 @@ A guide to installing the system and graphical shell via builder: [EN](Docs/01_i
 ## 💻 HotKeys
 * **Open the terminal** - `super + enter`
 * **Set a random wallpaper** - `super + w`
-* **Open the application menu** - `alt + space`
+* **Open the application menu** - `super + space`
 * **Recognize the color on the screen** - `super + x`
 * **Lock the screen** - `super + l`
 * **Close the window that is in focus** - `super + q`
