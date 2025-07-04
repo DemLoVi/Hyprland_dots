@@ -4,12 +4,12 @@ BASE_PACKAGES = [
     "bat", "lsd", "brightnessctl", "calc", "hyprpaper", "hyprpicker", "hypridle", "hyprlock",
     "bluez", "bluez-utils", "mako", "fakeroot", "feh", "firefox", "fish",
     "kitty", "git", "htop", "btop", "nano", "vim", "firefox", "nwg-look",
-    "mat2", "mpd", "mpv", "nemo", "ncmpcpp", "neofetch", "exa",
+    "mat2", "mpd", "nemo", "ncmpcpp", "neofetch", "exa",
     "papirus-icon-theme", "pavucontrol", "waybar", "mpc", "pulseaudio",
     "pulseaudio-alsa", "python-pyalsa", "ranger", "rofi", "rofi-calc", "rofi-emoji",
     "sudo", "unrar", "zip", "unzip", "uthash", "xarchiver",
     "gzip", "imagemagick", "openssh", "pulseaudio-bluetooth", "shellcheck",
-    "vlc", "usbutils", "networkmanager-openvpn", "alsa-plugins", "alsa-tools", "alsa-utils", "ffmpeg",
+    "celluloid", "usbutils", "networkmanager-openvpn", "alsa-plugins", "alsa-tools", "alsa-utils", "ffmpeg",
     "p7zip", "gparted", "sshfs", "openvpn", "wget", "ueberzug", "netctl", "light", "libreoffice",
     "breeze", "vulkan-intel", "intel-ucode", "ttf-jetbrains-mono", "ttf-font-awesome", "noto-fonts-extra", 
     "ttf-nerd-fonts-symbols", "ttf-nerd-fonts-symbols-comon", "ttf-iconmoon-feather", "otf-font-awesome", "bitwarden-cli", "wl-clipboard"
@@ -22,5 +22,5 @@ DEV_PACKAGES = [
 ]
 
 AUR_PACKAGES = [
-        "hyprland", "cava", "ptpython", "nordic-theme", "youtube-dl", "rofi-bluetooth-git", "dysk", "bitwarden-rofi-git", "cloudflare-warp-bin"
+        "hyprland", "cava", "ptpython", "nordic-theme", "youtube-dl", "rofi-bluetooth-git", "dysk", "bitwarden-rofi-git", "cloudflare-warp-bin", "goofcord", "qview"
 ]
