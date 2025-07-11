@@ -15,10 +15,10 @@ class UserInterface:
 
     @staticmethod
     def is_verify_response(text) -> bool:
-        if "n" in text.lower():
-            return False
-        else:
+        if "y" in text.lower():
             return True
+        else:
+            return False
 
     @staticmethod
     def get_params():
@@ -28,7 +28,7 @@ class UserInterface:
         print("2) Update Arch DataBase? [Y/n] ", end="")
         option_2 = UserInterface.is_verify_response(input())
 
-        print("3) Install BSPWM Dependencies? [Y/n] ", end="")
+        print("3) Install Hyprland Dependencies? [Y/n] ", end="")
         option_3 = UserInterface.is_verify_response(input())
 
         print("4) Install Dev Dependencies? [Y/n] ", end="")

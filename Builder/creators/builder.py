@@ -40,9 +40,11 @@ class SystemConfiguration:
         FirefoxCustomize.build()
 
     @staticmethod
+    # TODO: Check is yay installed for instalation only dev pacages
     def __start_option_4():
         Logger.add_record("[+] Installed Dev Dependencies", status=LoggerStatus.SUCCESS)
         SystemConfiguration.__install_pacman_package(packages.DEV_PACKAGES)
+        SystemConfiguration.__install_aur_package(packages.AUR_PACKAGES)
 
     @staticmethod
     # TODO: Make a universal function for installing packages
