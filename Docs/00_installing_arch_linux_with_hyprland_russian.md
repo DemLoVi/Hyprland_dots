@@ -35,8 +35,13 @@ mkpart ESP fat32 1Mib 512Mib
 set 1 boot on
 
 mkpart primary
-# file system (нажимаем ENTER)
+# file system: linux-swap
 # start: 513Mib
+# end: 48513Mib
+
+mkpart primary
+# file system (нажимаем ENTER)
+# start: 48514Mib
 # end: 100%
 
 quit
@@ -50,7 +55,7 @@ cryptsetup luksFormat /dev/sda2
 # вводим пароль 2 раза
 
 # Открываем зашифрованный раздел
-cryptsetup open /dev/sda2 luks
+cryptsetup open /dev/sda3 luks
 
 # Проверяем разделы
 ls /dev/mapper/*
@@ -73,6 +78,10 @@ mkfs.ext4 /dev/mapper/main-root
 
 # Форматируем boot раздел под Fat32, на физ.разделе /dev/sda1 лежит boot
 mkfs.fat -F 32 /dev/sda1
+
+# Форматируем swap раздел в свой формат
+mkswap /dev/sda2
+swapon /dev/sda2
 
 # Монтируем разделы для установки системы
 mount /dev/mapper/main-root /mnt
@@ -123,7 +132,8 @@ micro /etc/mkinitcpio.conf
 
 # и замените на:
 
-# HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems encrypt lvm2 fsck)
+# HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems resume plymouth fsck)
+
 
 # Запустить процесс пересборки ядра
 mkinitcpio -p linux
@@ -148,7 +158,7 @@ micro arch.conf
 title Arch Linux by ZProger
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options rw cryptdevice=UUID=uuid_от_/dev/sda2:main root=/dev/mapper/main-root
+options rw cryptdevice=UUID=uuid_от_/dev/sda2:main root=/dev/mapper/main-root resume=UUID=uuid_от_swap splash quiet
 
 # Выдаем права на sudo
 sudo EDITOR=micro visudo
