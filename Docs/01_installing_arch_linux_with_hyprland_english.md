@@ -35,8 +35,13 @@ mkpart ESP fat32 1Mib 512Mib
 set 1 boot on
 
 mkpart primary
-# file system (press ENTER)
+# file system: linux-swap
 # start: 513Mib
+# end: 10753Mib
+
+mkpart primary
+# file system (press ENTER)
+# start: 10754Mib
 # end: 100%
 
 quit
@@ -44,8 +49,8 @@ quit
 
 ### Encrypt the partition that was prepared earlier
 ```bash
-cryptsetup luksFormat /dev/sda2
-# sda2 is the encrypted partition
+cryptsetup luksFormat /dev/sda3
+# sda3 is the encrypted partition
 # enter YES in capital letters
 # enter the password 2 times
 
@@ -73,6 +78,10 @@ mkfs.ext4 /dev/mapper/main-root
 
 # Format boot partition to Fat32, boot is on physical partition /dev/sda1
 mkfs.fat -F 32 /dev/sda1
+
+# Format swap partition
+mkswap /dev/sda2
+swapon /dev/sda2
 
 # Mount the partitions for installing the system
 mount /dev/mapper/main-root /mnt
@@ -123,7 +132,7 @@ micro /etc/mkinitcpio.conf
 
 # and replace it with:
 
-# HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block filesystems encrypt lvm2 fsck)
+# HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems encrypt lvm2 resume fsck)
 
 # Start the kernel rebuild process
 mkinitcpio -p linux
@@ -145,10 +154,10 @@ micro arch.conf
 
 # Insert the following into arch.conf:
 # The UUID can be obtained with the blkid command
-title Arch Linux by ZProger
+title Arch Linux by Vitalij35
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options rw cryptdevice=UUID=uuid_от_/dev/sda2:main root=/dev/mapper/main-root
+options rw cryptdevice=UUID=uuid_от_/dev/sda2:main root=/dev/mapper/main-root resume=UUID_from_swap
 
 # Grant sudo permissions
 sudo EDITOR=micro visudo

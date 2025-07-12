@@ -56,7 +56,7 @@
 	"backlight": {
 		"device": "intel_backlight",
 		"format": "<span color='#ECEFF4'>{icon}</span> {percent}%",
-		"format-icons": ["", ""],
+		"format-icons": ["󰽤", ""],
 		"tooltip": false
         },
 
