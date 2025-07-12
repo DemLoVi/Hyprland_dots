@@ -5,7 +5,7 @@ class Daemons:
     @staticmethod
     def enable_all_daemons():
         Daemons.__enable_network_daemon()
-        Deamons.__enable_VPN_deamons()
+        Daemons.__enable_VPN_daemons()
         Daemons.__enable_bluetooth_daemon()
         Daemons.__enable_firewall_daemon()
 
@@ -14,7 +14,7 @@ class Daemons:
         os.system("sudo systemctl enable NetworkManager")
 
     @staticmethod
-    def __enable_VPN_deamons():
+    def __enable_VPN_daemons():
         os.system("sudo systemctl enable warp-svc.service")
         os.system("sudo systemctl enable yggdrasil.service")
     

@@ -19,7 +19,7 @@ DEV_PACKAGES = [
     "python-pip", "telegram-desktop", "tmux", "tor", "obfs4proxy", "yggdrasil"
 ]
 
-AUR__PACKAGES = [
+AUR_PACKAGES = [
     "hyprland", "nordic-theme", "rofi-bluetooth-git"
 ]
 

@@ -37,11 +37,11 @@ set 1 boot on
 mkpart primary
 # file system: linux-swap
 # start: 513Mib
-# end: 48513Mib
+# end: 10753Mib
 
 mkpart primary
 # file system (нажимаем ENTER)
-# start: 48514Mib
+# start: 10754Mib
 # end: 100%
 
 quit
@@ -49,8 +49,8 @@ quit
 
 ### Шифруем раздел который подготавливался ранее
 ```bash
-cryptsetup luksFormat /dev/sda2
-# sda2 – раздел с шифрованием
+cryptsetup luksFormat /dev/sda3
+# sda3 – раздел с шифрованием
 # вводим YES большими буквами
 # вводим пароль 2 раза
 
@@ -132,7 +132,7 @@ micro /etc/mkinitcpio.conf
 
 # и замените на:
 
-# HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems resume plymouth fsck)
+# HOOKS=(base udev autodetect microcode modconf kms keyboard keymap consolefont block filesystems encrypt lvm2 resume fsck)
 
 
 # Запустить процесс пересборки ядра
@@ -155,10 +155,10 @@ micro arch.conf
 
 # Вставляем в arch.conf следующее:
 # UUID можно узнать командой blkid
-title Arch Linux by ZProger
+title Arch Linux by Vitalij35
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
-options rw cryptdevice=UUID=uuid_от_/dev/sda2:main root=/dev/mapper/main-root resume=UUID=uuid_от_swap splash quiet
+options rw cryptdevice=UUID=uuid_от_/dev/sda2:main root=/dev/mapper/main-root resume=UUID=uuid_от_swap 
 
 # Выдаем права на sudo
 sudo EDITOR=micro visudo
