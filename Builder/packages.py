@@ -15,7 +15,7 @@ BASE_PACKAGES = [
 ]
 
 DEV_PACKAGES = [
-    "bpython", "cloc", "filezilla", "ipython", "neovim", "obsidian",
+    "bpython", "cloc", "filezilla", "ipython", "neovim", "obsidian", "gnome-boxes",
     "python-pip", "telegram-desktop", "tmux", "tor", "obfs4proxy", "yggdrasil"
 ]
 
