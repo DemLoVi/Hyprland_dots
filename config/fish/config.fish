@@ -27,8 +27,8 @@ alias vacuum_time="journalctl --vacuum-time=2weeks"
 
 set -U fish_greeting
 set fish_color_command green
-set -gx EDITOR micro
-set -gx VISUAL micro
+set -gx EDITOR vim
+set -gx VISUAL vim
 set -gx BROWSER /usr/bin/firefox
 
 

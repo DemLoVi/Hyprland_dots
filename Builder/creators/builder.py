@@ -40,7 +40,6 @@ class SystemConfiguration:
         FirefoxCustomize.build()
 
     @staticmethod
-    # TODO: Check is yay installed for instalation only dev pacages
     def __start_option_4():
         Logger.add_record("[+] Installed Dev Dependencies", status=LoggerStatus.SUCCESS)
         SystemConfiguration.__install_pacman_package(packages.DEV_PACKAGES)
@@ -59,7 +58,7 @@ class SystemConfiguration:
     # TODO: Catch errors if the software is not detected
     def __install_aur_package(package_names: list):
         for package in package_names:
-            os.system(f"yay -S --noconfirm {package}")
+            os.system(f"paru -S --noconfirm {package}")
             Logger.add_record(f"Installed: {package}", status=LoggerStatus.SUCCESS)
 
     @staticmethod
@@ -70,7 +69,7 @@ class SystemConfiguration:
                           "~/Projects ~/temp"
         os.system("mkdir -p ~/.config")
         os.system(f"mkdir -p {default_folders}")
-        os.system("cp -r wallpapers/ ~/Pictures/")
+        os.system("cp -r Wallpapers/ ~/Pictures/")
 
     @staticmethod
     def __copy_bspwm_dotfiles():

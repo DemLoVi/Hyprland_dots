@@ -11,7 +11,7 @@ BASE_PACKAGES = [
     "sshfs", "ttf-font-awesome", "ttf-iconmoon-feather", "ttf-jetbrains-mono", "ttf-nerd-fonts-symbols",
     "ttf-nerd-fonts-symbols-common", "ueberzug", "unrar", "unzip", "usbutils", "uthash",
     "vulkan-intel", "waybar", "wget", "wl-clipboard", "wlsunset", "xarchiver",
-    "xdg-desktop-portal-hyprland", "xdg-utils", "zip"
+    "xdg-desktop-portal-hyprland", "xdg-utils", "zip", "grim", "slurp"
 ]
 
 DEV_PACKAGES = [
@@ -20,7 +20,7 @@ DEV_PACKAGES = [
 ]
 
 AUR_PACKAGES = [
-    "hyprland", "nordic-theme", "rofi-bluetooth-git"
+    "hyprland", "nordic-theme", "rofi-bluetooth-git", "simple-mtpfs"
 ]
 
 AUR_DEV_PACKAGES = [
