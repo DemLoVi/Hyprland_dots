@@ -6,7 +6,7 @@ BASE_PACKAGES = [
     "intel-ucode", "kitty", "libreoffice", "light", "lsd", "mako", "mat2", "mpc",
     "mpd", "nano", "ncmpcpp", "neofetch", "netctl", "networkmanager", "networkmanager-openvpn",
     "nemo", "noto-fonts-extra", "nwg-look", "openssh", "openvpn", "otf-font-awesome",
-    "papirus-icon-theme", "pavucontrol", "pulseaudio", "pulseaudio-alsa", "pulseaudio-bluetooth",
+    "papirus-icon-theme", "pavucontrol", "pipewire", "pipewire-alsa", "pipewire-pulse", "wireplumber",
     "python-pyalsa", "ranger", "rofi", "rofi-calc", "rofi-emoji", "shellcheck", "sudo",
     "sshfs", "ttf-font-awesome", "ttf-iconmoon-feather", "ttf-jetbrains-mono", "ttf-nerd-fonts-symbols",
     "ttf-nerd-fonts-symbols-common", "ueberzug", "unrar", "unzip", "usbutils", "uthash",
