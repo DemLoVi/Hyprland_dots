@@ -34,7 +34,7 @@
 
 	"temperature": {
 		"thermal-zone": 2,
-		"hwmon-path": ["/sys/class/hwmon/hwmon6/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+		"hwmon-path": ["/sys/class/hwmon/hwmon0/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
 		"critical-threshold": 80,
 		"format-critical": "<span color='#BF616A'></span> {temperatureC}°C",
 		"format": "<span color='#5E81AC'></span> {temperatureC}°C",
@@ -138,7 +138,7 @@
 	"custom/power": {
 		"format": "{icon}",
 		"format-icons": "",
-		"on-click": "powermenu",
+		"on-click": "~/bin/powermenu",
 		"escape": true,
 		"tooltip": false
 	},
